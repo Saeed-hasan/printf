@@ -14,7 +14,7 @@ int _printf(const char * const format, ...)
 
 	va_list args;
 	int i = 0; /*indexer for the input format*/
-	int j = 0; /*indexer for the printer*/
+	int j; /*indexer for the printer*/
 	int len = 0;
 
 	va_start(args, format);
@@ -24,6 +24,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
+		j = 0;
 		while (j <= 2)
 		{
 			if (printer[j].type[0] == format[i] && printer[j].type[1] == format[i + 1])
