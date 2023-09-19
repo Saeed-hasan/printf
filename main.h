@@ -27,6 +27,7 @@ int printf_char(va_list val);
 int printf_string(va_list val);
 int printf_int(va_list args);
 int printf_dec(va_list args);
+int printf_bin(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
 
