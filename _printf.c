@@ -12,6 +12,7 @@ int _printf(const char * const format, ...)
 		{"%%", printf_37},
 		{"%i", printf_int},
 		{"%d", printf_dec},
+		{"%b", printf_bin},
 	};
 
 	va_list args;
@@ -27,7 +28,7 @@ Here:
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j <= 4)
+		while (j <= 5)
 		{
 			if (printer[j].type[0] == format[i] && printer[j].type[1] == format[i + 1])
 			{
