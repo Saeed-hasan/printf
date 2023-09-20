@@ -12,6 +12,7 @@ int main(void)
 	int len;
 	int len2;
 	unsigned int ui;
+	void *addr;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -36,5 +37,7 @@ int main(void)
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+	_printf("Address:[%p]\n", &addr);
+	printf("Address:[%p]\n", &addr);
 	return (0);
 }

@@ -7,14 +7,12 @@
 int _printf(const char * const format, ...)
 {
 	print_t printer[] = {
-		{"%s", printf_string},
-		{"%c", printf_char},
-		{"%%", printf_37},
-		{"%i", printf_int}, {"%d", printf_dec},
-		{"%b", printf_bin},
-		{"%u", printf_unsigned},
-		{"%o", printf_oct},
-		{"%x", printf_hex}, {"%X", printf_HEX}
+		{"%s", printf_string}, {"%c", printf_char},
+		{"%%", printf_37}, {"%i", printf_int},
+		{"%d", printf_dec}, {"%b", printf_bin},
+		{"%u", printf_unsigned}, {"%o", printf_oct},
+		{"%x", printf_hex}, {"%X", printf_HEX},
+		{"%p", printf_pointer},
 	};
 
 	va_list args;
@@ -30,7 +28,7 @@ Here:
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j <= 9)
+		while (j <= 10)
 		{
 			if (printer[j].type[0] == format[i] && printer[j].type[1] == format[i + 1])
 			{
